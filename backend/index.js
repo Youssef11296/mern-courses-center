@@ -15,6 +15,7 @@ const app = express ();
 // server middlewares
 app.use (express.json ());
 app.use (cors ());
+app.use ('/api/courses', require ('./routes/coursesRoute'));
 
 // server configuration
 const port = process.env.PORT || 5000;
