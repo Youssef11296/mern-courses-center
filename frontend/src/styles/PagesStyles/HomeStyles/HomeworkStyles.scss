@@ -1,0 +1,44 @@
+@import '../../../index.scss';
+
+.home-work {
+    .homework-subject-heading {
+        @include setFlex($justify: space-between, $align: center);
+
+        .left {
+            .subject-name {
+                color: #fff;
+            }
+
+            .homework-deadline {
+                &.danger {
+                    color: rgb(185, 24, 24);
+
+                    span {
+                        margin-left: .5rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .right {
+            align-self: flex-start;
+
+            .subject-logo {
+                max-width: 60px;
+                object-fit: contain;
+                border-radius: $border-radius-sm;
+            }
+        }
+
+    }
+
+    .homework-describtion {
+        color: #fff;
+        max-width: 80%;
+    }
+
+    .antd-avatar {
+        margin: 0 .1rem;
+    }
+}

@@ -1,0 +1,87 @@
+@import '../../../index.scss';
+
+.exams-reminder {
+    text-align: center;
+    border-radius: $border-radius;
+    box-shadow: $shoadow-lighten;
+
+    background: $main-grad;
+
+    h3 {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .countdown-timer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1rem;
+
+        .counters {
+            display: flex;
+            justify-content: center;
+
+            .splitter {
+                color: #fff;
+                font-weight: 600;
+                font-size: 2.4rem;
+                margin: 0 .5rem;
+            }
+
+            &>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: #fff;
+                font-weight: 500;
+                font-size: 2.4rem;
+
+                .counter-box {
+                    .time-digit {
+                        border-radius: $border-radius;
+                        padding: .2rem .5rem;
+                        background-color: $time-digit-bg;
+                    }
+
+                    &>span {
+                        &:first-child {
+                            margin-right: .5rem;
+                        }
+                    }
+                }
+            }
+
+            align-items: center;
+        }
+
+        .labels {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            margin-top: .5rem;
+
+            span {
+                font-weight: 600;
+                font-size: .9rem;
+                color: #fff;
+                display: inline-block;
+                flex: .333;
+
+                &:first-child {
+                    text-align: end;
+                }
+
+                &:nth-child(2) {
+                    text-align: center;
+                }
+
+                &:last-child {
+                    text-align: start;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@import '../../../index.scss';
+
+.today-classes {
+    // margin: 2rem 0;
+
+    .today-classes-heading {
+        margin: auto;
+
+        p {
+            color: grey;
+            font-weight: 600;
+            opacity: .5;
+        }
+    }
+
+    .class-time-info {
+        @include setFlex($align: center, $justify: space-between);
+
+        .subject-logo {
+            flex: .3;
+            // margin-right: 2rem;
+
+            img {
+                width: 100%;
+                object-fit: contain;
+                border-radius: $border-radius-sm;
+            }
+        }
+
+        .upcomming-info {
+            flex: .7;
+            justify-self: center;
+        }
+    }
+
+    .class-box {
+        position: relative;
+
+        .class-time {
+            font-size: .8rem;
+            font-weight: 500;
+            color: grey;
+        }
+
+        .classes-options {
+            margin-left: auto;
+            flex: .2;
+            width: 200px;
+
+            // transform: rotate(90deg);
+            button {
+                width: 150px;
+                border: none;
+                outline: none;
+                border-radius: $border-radius-sm;
+
+                &:not(:first-child) {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,92 @@
+@import 'antd/dist/antd.css';
+
+// global variables
+$main-bg: #1c1d21;
+$main-grad-color:#32eb8d;
+$secondary-grad-color:#08c3b2;
+$main-grad:linear-gradient($main-grad-color, $secondary-grad-color);
+$btn-bg:#08c3b2;
+$main-card-bg: #2f3035;
+$secondary-card-bg:#252831;
+$third-card-bg:#252831;
+$time-digit-bg: #1bc294;
+
+$shadow: 0 2px 8px rgba(0, 0, 0, .2);
+$shoadow-lighten: 0 2px 8px rgba(50, 235, 141, .25);
+
+$border-radius: 10px;
+$border-radius-sm: 5px;
+
+// global mixins
+@mixin setFlex($justify: flex-start, $align: flex-start, $wrap: no-wrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+// global styles
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+// body styles
+body {
+  background-color: $main-bg;
+}
+
+// scrollbar customization
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+// custom classes
+.container,
+.container-fluid {
+  width: 75%;
+  padding: 1rem;
+  margin: auto;
+}
+
+.container-fluid {
+  width: 90%;
+}
+
+.sub-container {
+  width: 50%;
+  padding: 1rem;
+  margin: auto;
+}
+
+.container-heading {
+  font-weight: 600;
+  color: #fff;
+}
+
+.box {
+  padding: 1rem;
+  min-height: 170px;
+  box-shadow: $shadow;
+  border-radius: $border-radius;
+}
